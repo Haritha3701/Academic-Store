@@ -1,0 +1,32 @@
+*{
+font-family:'Monaco',monospace;
+}
+
+.message{
+text-align:center;
+margin-top:280px;
+}
+
+.message h1{
+color:#246608;
+padding:20px;
+}
+
+.message button{
+height:70px;
+width:450px;
+font-size:18px;
+color:white;
+background-color: #166d3b;
+background-image: linear-gradient(147deg, #166d3b 0%, #000000 74%);
+border:none;
+border-radius:15px;
+
+}
+.message button:hover{
+color:black;
+background-image:none;
+background-color:white;
+border:solid 3px #246608;
+}
+}

@@ -1,0 +1,32 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+
+<div class="container">
+    <div class="credentials col-12" style="width:500px;" >
+        <div style="">
+            <h1>Login</h1>
+        </div>
+        <form method="post">
+            {% csrf_token %}
+        <div>
+            <label for="username">Username</label><br>
+            <input id="username" type="text" name="uname" required>
+        </div>
+        <div>
+            <label for="password">Password</label><br>
+            <input id="password" type="password" name="password">
+        </div>
+        <div>
+            <button type="submit">Login</button>
+        </div>
+            <a href="{% url 'credentials:registerpage' %}">Don't have an account. Click here!</a>
+        </form>
+    </div>
+</div>
+
+{% for msg in messages %}
+<p style="color:red;font-weight:bold; text-align:center;">{{msg}}</p>
+{% endfor %}
+{% endblock %}

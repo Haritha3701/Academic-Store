@@ -1,0 +1,18 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+
+<div class="container">
+  <div class="form-link col-12 col-lg-12">
+    <div>
+      <a href="{% url 'store_app:formpage' %}">
+        <button>
+          <h2>Click here to fill the Student Form</h2>
+        </button>
+      </a>
+    </div>
+  </div>
+</div>
+
+{% endblock %}

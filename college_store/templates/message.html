@@ -1,0 +1,28 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="{% static 'css/confirm_msg_styles.css' %}">
+
+</head>
+<body>
+<div class="container">
+    <div class="message">
+        <div>
+            <h1>Order Confirmed</h1>
+        </div>
+        <div>
+            <a href="{% url 'store_app:indexpage' %}">
+                <button>
+                    Click Here to Return to Home Page
+                </button>
+            </a>
+        </div>
+    </div>
+</div>
+
+</body>
+</html>

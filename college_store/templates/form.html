@@ -1,0 +1,199 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+
+<div class="container">
+  <div class="form-title" style="text-align:center">
+    <h1>STUDENTS   FORM</h1>
+  </div>
+</div>
+<form action="{% url 'store_app:messagepage' %}" method="post">
+  {% csrf_token %}
+
+  <div class="container col-6">
+    <div class="form">
+
+    <div class="row g-3 align-items-center">
+      <div class="col-4">
+        <label for="name" class="col-form-label">Name</label>
+      </div>
+      <div class="col-sm-8 col-lg-8">
+        <input type="text" id="name" class="form-control" required>
+      </div>
+    </div>
+    <br>
+
+
+    <div class="row g-3 align-items-center">
+      <div class="col-4">
+        <label for="dob" class="col-form-label">Date of Birth</label>
+      </div>
+      <div class="col-sm-8 col-lg-8">
+        <input type="date" id="dob" class="form-control" required >
+      </div>
+    </div>
+    <br>
+
+    <div class="row g-3 align-items-center">
+      <div class="col-4">
+        <label for="age" class="col-form-label">Age</label>
+      </div>
+      <div class="col-sm-8 col-lg-8">
+        <input type="number" id="age" class="form-control" required>
+      </div>
+    </div>
+    <br>
+
+    <div class="row g-3 align-items-center" aria-required>
+      <div class="col-4">
+        <label class="col-form-label">Gender</label>
+      </div>
+      <div class="form-check col-sm-4">
+        <input class="form-check-input" type="radio" name="radioGroup" id="radioOption1" value="Male">
+        <label class="form-check-label" for="radioOption1">
+          Male
+        </label>
+      </div>
+      <div class="form-check col-sm-4">
+        <input class="form-check-input" type="radio" name="radioGroup" id="radioOption2" value="Female" style="accent-color:green;">
+        <label class="form-check-label" for="radioOption2">
+          Female
+        </label>
+        </div>
+      </div>
+
+
+      <div class="row g-3 align-items-center">
+        <div class="col-4">
+          <label for="phonenumber" class="col-form-label">Phone Number</label>
+        </div>
+        <div class="col-sm-8 col-lg-8">
+          <input type="tel" id="phonenumber" class="form-control" maxlength="10" required>
+        </div>
+      </div>
+      <br>
+
+      <div class="row g-3 align-items-center">
+        <div class="col-4">
+          <label for="emailid" class="col-form-label">Mail Id</label>
+        </div>
+        <div class="col-sm-8 col-lg-8">
+          <input type="email" id="emailid" class="form-control" required>
+        </div>
+      </div>
+      <br>
+
+
+      <div class="row g-3 align-items-center">
+        <div class="col-4">
+          <label for="address" class="col-form-label">Address</label>
+        </div>
+        <div class="col-sm-8 col-lg-8">
+          <textarea id="address" class="form-control" required></textarea>
+        </div>
+      </div>
+      <br>
+
+
+      <div class="row g-3 align-items-center">
+        <div class="col-4">
+          <label for="dept" class="col-form-label">Department</label>
+        </div>
+        <div class="col-sm-4 col-lg-8">
+
+          <select id="dept" style="width:460px;height:40px;border-radius:5px;" required>
+            <option value="0">Select your Department</option>
+          {% for data in dept %}
+            <option value="{{data.id}}">{{data.dept_name}}</option>
+          {% endfor %}
+          </select>
+
+        </div>
+      </div>
+      <br>
+      <div class="row g-3 align-items-center">
+        <div class="col-4">
+          <label for="courses" class="col-form-label">Courses</label>
+        </div>
+        <div class="col-sm-4 col-lg-8">
+
+          <select id="courses" style="width:460px;height:40px;border-radius:5px;" required>
+            <option value="0">Select your Course</option>
+            {% for data1 in course %}
+            <option value="{{data1.dept_id}}">{{data1.course_name}}</option>
+            {% endfor %}
+          </select>
+
+        </div>
+
+      </div>
+      <br>
+
+
+      <div class="row g-3 align-items-center">
+        <div class="col-4">
+          <label for="purpose" class="col-form-label">Purpose</label>
+        </div>
+        <div class="col-sm-4 col-lg-8">
+          <select id="purpose" style="width:460px;height:40px;border-radius:5px;" required>
+            <option value="Enquiry">For enquiry</option>
+            <option value="Order">Place Order</option>
+            <option value="Return">Return</option>
+
+          </select>
+        </div>
+      </div>
+      <br>
+
+      <div class="row g-3 align-items-center" >
+        <div class="col-4">
+          <label class="col-form-label">Materials</label>
+        </div>
+        <div class="col-auto">
+          <input class="form-check-input" type="checkbox" value="" id="books">
+          <label class="form-check-label" for="books">Textbooks</label>
+        </div>
+        <div class="col-auto">
+        <input class="form-check-input" type="checkbox" value="" id="qnpaper">
+        <label class="form-check-label" for="qnpaper">Sample Question Papers</label>
+        </div>
+        <div class="col-auto">
+        <input class="form-check-input" type="checkbox" value="" id="pen">
+        <label class="form-check-label" for="pen">Pen</label>
+        </div>
+        <div class="col-auto">
+        <input class="form-check-input" type="checkbox" value="" id="notebooks">
+        <label class="form-check-label" for="notebooks">Notebooks</label>
+        </div>
+        <div class="col-auto">
+        <input class="form-check-input" type="checkbox" value="" id="studymaterials">
+        <label class="form-check-label" for="studymaterials">Study Materials</label>
+        </div>
+      </div>
+      <br>
+
+    <div>
+        <button class="form-button" type="submit">Submit Form</button>
+    </div>
+</div>
+</div>
+</form>
+
+
+<script>
+
+$(document).ready(function(){
+ var dept = $("#dept");
+ var courses = $("#courses");
+ var $options = courses.find('option');
+
+ dept.on('change',function(){
+ var selectedDept = this.value;
+    courses.html($options.filter('[value="'+ selectedDept +'"]'));
+ }).trigger('change');
+
+});
+</script>
+
+{% endblock %}

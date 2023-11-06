@@ -1,0 +1,284 @@
+*{
+font-family:'Monaco',monospace;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    margin: 0;
+}
+
+.container {
+    flex: 1;
+}
+
+/*------navbar------*/
+
+.navbar{
+z-index: 2;
+}
+
+.navbar-brand img{
+height:60px;
+width:250px;
+}
+
+.nav-item a{
+color:black;
+font-size:18px;
+margin-right:40px;
+}
+
+.nav-item a:hover{
+color:white;
+}
+
+.dropdown-menu a{
+color:black;
+margin-right:0px;
+}
+
+.dropdown-menu a:hover{
+color:black;
+}
+
+/*------banner------*/
+
+.banner_image{
+width:100%;
+height:550px;
+background-repeat: no-repeat;
+background-size: cover;
+}
+
+.banner_title{
+margin: auto;
+width: 80%;
+height:60%;
+background-color:white;
+position: absolute;
+top: 38%;
+left: 20%;
+transform: translate(-46%, -28%);
+font-weight:bolder;
+text-align:center;
+padding-top:10%;
+color:white;
+z-index: 1;
+border-radius: 60%;
+
+/*background-color: #166d3b;
+background-image: linear-gradient(147deg, #166d3b 0%, #000000 74%);*/
+
+background-color: rgba(22, 109, 59, 0.5);
+background-image: linear-gradient(147deg, rgba(22, 109, 59, 0.5) 0%, rgba(0, 0, 0, 0.5) 74%);
+}
+
+.banner_title h1{
+color:white;
+font-family:'Copperplate',fantasy;
+font-size:50px;
+}
+
+.banner_title h2{
+color:#FFA500;
+font-family:'Garamond',serif;
+font-size:35px;
+font-weight:bold;
+}
+
+footer{
+background-color:#FFA500;
+height: 60px;
+position:relative;
+bottom:auto;
+width:100%;
+margin-top:auto;
+}
+
+footer p{
+color:black;
+padding-top:20px;
+font-size:15px;
+}
+
+/*------about------*/
+
+.about-us{
+margin-top:100px;
+margin-bottom:100px;
+padding:20px;
+border: solid 2px #708090 ;
+border-radius:20px;
+}
+
+.about-us h2{
+text-align:center;
+color:#246608;
+font-family:'Georgia',serif;
+}
+
+.about-us p{
+font-size:18px;
+}
+
+/*------credentials------*/
+
+.credentials{
+margin: auto;
+width: 50%;
+text-align:center;
+padding-bottom:10px;
+border-radius:20px;
+background-color: #166d3b;
+background-image: linear-gradient(147deg, #166d3b 0%, #000000 74%);
+}
+
+.credentials h1{
+font-family:'Georgia',serif;
+color:white;
+margin:60px;
+padding:10px;
+}
+
+.credentials label{
+color:#FFA500;
+font-size:18px;
+margin-right:260px;
+}
+
+.credentials input{
+border-radius:10px;
+border:none;
+width:340px;
+height:40px;
+}
+.credentials input:hover{
+border:solid 3px #FFA500;
+}
+
+.credentials input:focus{
+outline:none;
+}
+
+.credentials button{
+background-color:#FFA500;
+margin:30px;
+height:45px;
+width:250px;
+border-radius:10px;
+border:none;
+font-size:18px;
+color:black;
+}
+
+.credentials button:hover{
+background-color:white;
+border: solid 3px #FFA500;
+}
+
+.credentials a{
+text-decoration:none;
+color:white;
+padding-bottom:10px;
+}
+
+.credentials a:hover{
+text-decoration:underline;
+}
+
+/*------form link------*/
+
+.form-link{
+text-align:center;
+margin-top:200px;
+}
+
+.form-link button{
+width:50%;
+height:15%;
+color:white;
+background-color: #166d3b;
+background-image: linear-gradient(147deg, #166d3b 0%, #000000 74%);
+border:none;
+border-radius:15px;
+}
+
+.form-link button:hover{
+color:black;
+background-image:none;
+background-color:white;
+border:solid 3px darkgreen;
+}
+
+/*------form------*/
+
+.form-title h1{
+font-family:'Georgia',serif;
+margin:5%;
+color:#246608;
+}
+
+.form label{
+font-size:16px;
+}
+
+.form input{
+border: 3px solid #246608;
+}
+
+.form input:focus{
+    border: 3px solid #FFA500 ;
+    outline: none;
+    box-shadow:none;
+}
+
+.form input:hover{
+    border: 3px solid #FFA500;;
+}
+
+.form textarea{
+border: 3px solid #246608;
+}
+
+.form textarea:hover{
+border: 3px solid #FFA500;;
+}
+
+.form textarea:focus{
+    border: 3px solid #FFA500 ;
+    outline: none;
+    box-shadow:none;
+}
+
+.form select{
+border: 3px solid #246608;
+}
+
+.form select:hover{
+border: 3px solid #FFA500;;
+}
+
+.form select:focus{
+    border: 3px solid #FFA500 ;
+    outline: none;
+    box-shadow:none;
+}
+
+.form button{
+width:40%;
+height:50px;
+color:white;
+background-color:#246608;
+border:none;
+border-radius:10px;
+font-size:18px;
+margin:15%;
+
+}
+.form button:hover{
+color:black;
+background-color:#FFA500;
+}
+
